@@ -9,22 +9,40 @@ form, p, span {
     margin:0;
     padding:0; }
   
-input { font:12px arial; }
+input { 
+	font:12px Arial;
+}
+
+.button{
+	font:16px "Comic Sans MS";
+	padding:0 14px; 
+	border-radius: 4px;
+}
   
 a {
     color:#0000FF;
-    text-decoration:none; }
+    /*kevin text-decoration:none;*/ 
+}
   
     a:hover { text-decoration:underline; }
   
-#wrapper, #loginform {
+#wrapper {
     margin:0 auto;
     padding-bottom:25px;
     background:#EBF4FB;
-    width:504px;
+    width:900px;
+    border:1px solid #ACD8F0; }
+    
+#loginform {
+    margin:0 auto;
+    padding-bottom:25px;
+    background:#EBF4FB;
+    width:388px;  /*Kevin*/
     border:1px solid #ACD8F0; }
   
-#loginform { padding-top:18px; }
+#loginform { 
+	padding-top:18px;
+}
   
     #loginform p { margin: 5px; }
   
@@ -34,14 +52,19 @@ a {
     margin-bottom:25px;
     padding:10px;
     background:#fff;
-    height:270px;
-    width:430px;
+    height:215px;
+    width:836px;
     border:1px solid #ACD8F0;
-    overflow:auto; }
+    overflow:auto;
+    font-size: 14px;
+}
   
 #usermsg {
-    width:395px;
-    border:1px solid #ACD8F0; }
+    width:760px;
+    border:1px solid #ACD8F0; 
+    font-size: 18px;
+    padding: 2px 12px;
+}
   
 #submit { width: 60px; }
   
@@ -49,8 +72,24 @@ a {
   
 #menu { padding:12.5px 25px 12.5px 25px; }
   
-.welcome { float:left; }
+.welcome { 
+	float:left;
+    font-size: 14px;       
+ }
   
 .logout { float:right; }
   
 .msgln { margin:0 0 2px 0; }
+
+label {
+	font-size: 14px;
+}
+
+#name {
+	width: 155px;
+	margin-right: 42px;
+}
+
+.logout {
+	font-size: 14px;
+}

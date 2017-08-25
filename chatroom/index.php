@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Chat - Customer Module</title>
+<title>Friends Chat Room!</title>
 <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,14 +17,14 @@ else{
     <div id="wrapper">
         <div id="menu">
             <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
-            <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            <p class="logout"><a id="exit" href="#">Exit Chat Room</a></p>
             <div style="clear:both"></div>
         </div>    
         <div id="chatbox"></div>
          
         <form name="message" action="">
             <input name="usermsg" type="text" id="usermsg" size="63" />
-            <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+            <input name="submitmsg" type="submit"  id="submitmsg" value="Send" class="button"/>
         </form>
     </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
@@ -69,11 +69,14 @@ if(isset($_GET['logout'])){
 function loginForm(){
     echo '
     <div id="loginform">
+    <h2> Welcome to Friends Chat Room! </h2>
+    <br/>
     <form action="index.php" method="post">
-        <p>Please enter your name to continue:</p>
-        <label for="name">Name:</label>
+        <label for="name">Your name:&nbsp; </label>
         <input type="text" name="name" id="name" />
-        <input type="submit" name="enter" id="enter" value="Enter" />
+        <br/>
+        <br/>
+        <input type="submit" name="enter" id="enter" value="Enter" class="button"/>
     </form>
     </div>
     ';
@@ -94,7 +97,8 @@ function loginForm(){
 <script>
 //Load the file containing the chat log
 	//Load the file containing the chat log
-	function loadLog(){		
+	function loadLog(){
+		//console.log("loading...");		
 		var oldscrollHeight = $("#chatbox").attr("scrollHeight") - 20; //Scroll height before the request
 		$.ajax({
 			url: "log.html",
