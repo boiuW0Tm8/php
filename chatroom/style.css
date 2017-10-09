@@ -11,7 +11,9 @@ form, p, span {
   
 input { 
 	font:12px Arial;
+	padding-left: 5px;
 }
+
 
 .button{
 	font:16px "Comic Sans MS";
@@ -37,7 +39,7 @@ a {
     margin:0 auto;
     padding-bottom:25px;
     background:#EBF4FB;
-    width:388px;  /*Kevin*/
+    width:420px;  /*Kevin*/
     border:1px solid #ACD8F0; }
   
 #loginform { 
@@ -60,13 +62,14 @@ a {
 }
   
 #usermsg {
-    width:760px;
+    width:567px;
     border:1px solid #ACD8F0; 
     font-size: 18px;
     padding: 2px 12px;
+    margin-left: -169px;
 }
   
-#submit { width: 60px; }
+#submit { width: 83px; }
   
 .error { color: #ff0000; }
   
@@ -79,7 +82,11 @@ a {
   
 .logout { float:right; }
   
-.msgln { margin:0 0 2px 0; }
+.msgln { 
+	margin: 5px;
+	border-bottom:  1px dotted grey;
+	padding-bottom: 5px;
+}
 
 label {
 	font-size: 14px;
@@ -92,4 +99,99 @@ label {
 
 .logout {
 	font-size: 14px;
+}
+
+.msgln .avatar {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin: 7px 10px 0 0;
+}
+
+.loginTable {
+	text-align: left;
+	margin-left: 40px;
+}
+
+.loginTable #password {
+	width: 155px;
+}
+
+.RegisterTable #password {
+	width: 155px;
+	margin-left: -42px;
+}
+
+.RegisterTable #avatar {
+	margin-right: -16px;
+}
+
+.RegisterTable #confirm_password {
+	margin-left: -42px;
+	width: 155px;
+}
+
+.RegisterTable {
+	padding-left: 47px;
+}
+
+#popup{
+	display: none;
+	position: absolute;
+	z-index: 50;
+	border: 1px grey solid;
+	background-color: #8080ff;
+	background-color: rgba(0,0,255,0.3);
+	/*box-shadow: 4px 4px 2px, 4px 4px 8px red;*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 4px;
+	padding: 4px;
+}
+
+.RegisterTable #nickname {
+	margin-left: -42px;
+	width: 155px;
+}
+
+.linkButton {
+	font-size: 16px;
+    margin-left: 0px;
+    padding: 4px;
+    magin-top: 9px;
+    display: inline-block;
+    background-color: lightgray;
+    width: 80px;
+    color: black;
+    box-shadow: 2px 2px 2px grey;
+    /* border-style: ridge; */
+    /* border-width: thick; */
+    cursor: pointer;
+}
+
+a.linkButton:link {
+	text-decoration: none;
+}
+
+a.linkButton:hover {
+    background-color: gray;
+    color: black;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.msgln .date{
+	float: right;
+	color: gray;
+}
+
+i.emojiButton{
+	font-size: 20px;
 }

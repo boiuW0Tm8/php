@@ -1,15 +1,13 @@
 <?php
+require_once ("modules/function2.php");
+
 session_start();
-if(isset($_SESSION['name'])){
+if(isset($_SESSION['nickname'])){
+    $who = $_SESSION['nickname'];
     $text = $_POST['text'];
+    $avatar = $_SESSION['avatar'];
+    writeChatLog($who, $text, $avatar);
     
-    $fp = fopen("log.html", 'a');
-    $when = date("g:i A");
-    $who = $_SESSION['name'];
-    $sayWhat = stripslashes(htmlspecialchars($text));
-    $msg = "<div class='msgln'>($when) <b>$who</b>: $sayWhat<br></div>";
-    fwrite($fp, $msg);
-    fclose($fp);
 }
 ?>
 
